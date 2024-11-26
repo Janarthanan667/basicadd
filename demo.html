@@ -1,0 +1,63 @@
+<center><p class="one">Number1:<input id="num1" ></p><br>
+<p class="one">Number2:<input id="num2"></p><br><br>
+<center>
+<button onclick="changes()">Add</button></center>
+<p id="two">result</p></center>
+
+<style>
+    *{
+        background: linear-gradient(to right,yellow,white)
+    }
+
+    #num1{
+        border-radius: 20px;
+        border-color: aqua;
+        box-shadow: 2px 2px 5px pink, -2px 2px 5px greenyellow;
+        
+
+    }
+    #num1:hover{
+        background: white;
+        color: black;
+    }
+    #num2:hover{
+        background: white;
+        color: black;
+    }
+    #num2{
+        border-radius: 20px;
+        border-color: aqua;
+    }
+    button{
+        
+        color:bisque;
+        background: brown;
+    }
+    button:hover{
+        background: white;
+        color: red;
+    }
+    
+</style>
+
+<script>
+var box1=document.getElementById("num1")
+var box2=document.getElementById("num2")
+var two=document.getElementById("two")
+
+var box1value=Number(box1.value)
+var box2value=Number(box2.value)
+
+var result=box1value+box2value
+ 
+function changes()
+{
+    var box1value=Number(box1.value)
+    var box2value=Number(box2.value)
+    
+    var result=box1value+box2value
+
+    console.log(result)
+    two.textContent=result
+}
+</script>
